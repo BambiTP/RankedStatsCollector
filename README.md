@@ -13,3 +13,6 @@ xxxxxx in run_xxxxx = the final match id in your run. You can check which one it
 
 
 No need to change anything just do "python3 ctf_statistics.py" in the console and it will make a new folder with all the stats
+
+
+If you want to test the broken matches use test.py ask me for any info or help if you need it
