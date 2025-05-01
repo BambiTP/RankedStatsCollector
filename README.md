@@ -7,9 +7,9 @@ python3 ctf_statistics.py
 
 "Stats/Stats(x)/combined_stats.xlsx" has all the stats
 
-"outputs/run_xxxxxx/combinedStatsMaster.csv" has the individual match stats csv
+"outputs/run_xxxx/combinedStatsMaster.csv" has the individual match stats csv
 
-xxxxxx in run_xxxxx = the final match id in your run. You can check which one it is in latest_match.txt after the run is complete.
+the "xxxx" in run_xxxx = the final match id in your run. You can check which one it is in latest_match.txt after the run is complete.
 
 
 No need to change anything just do "python3 ctf_statistics.py" in the console and it will make a new folder with all the stats
