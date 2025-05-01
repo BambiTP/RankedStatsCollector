@@ -1,4 +1,3 @@
-# File: ctf_statistics.py
 #!/usr/bin/env python3
 import os
 import sys
@@ -18,16 +17,41 @@ MASTER_COMBINED_CSV = join(ROOT_DIR, "combinedStatsMaster.csv")
 LATEST_MATCH_SCRIPT = join(ROOT_DIR, "latest_match.py")
 COMBINE_SCRIPT      = join(ROOT_DIR, "combine.py")
 STATS_SCRIPT        = join(ROOT_DIR, "stats.py")
+
+# ─── REQUIRED DEPENDENCIES ─────────────────────────────────────────────────────
+REQUIRED_PACKAGES = [
+    ("requests", "requests"),
+    ("pandas", "pandas"),
+    ("openpyxl", "openpyxl"),
+    ("tagpro_eu", "tagpro-eu")
+]
+
 # ────────────────────────────────────────────────────────────────────────────────
+def check_dependencies():
+    missing = []
+    for module, pkg_name in REQUIRED_PACKAGES:
+        try:
+            __import__(module)
+        except ImportError:
+            missing.append(pkg_name)
+    if missing:
+        print(f"[ctf_statistics] ✖ Missing dependencies: {', '.join(missing)}")
+        print("Install them with: pip install " + " ".join(missing))
+        sys.exit(1)
+
 
 def run_subscript(path: str):
     print(f"[ctf_statistics] ▶ running {path}")
-    res = subprocess.run(["python3", path], check=False)
+    res = subprocess.run([sys.executable, path], check=False)
     if res.returncode != 0:
         print(f"[ctf_statistics] ✖ {path} failed with code {res.returncode}")
         sys.exit(res.returncode)
 
+
 def main():
+    # 0) Ensure all required packages are installed
+    check_dependencies()
+
     # 1) Fetch & merge new matches
     run_subscript(LATEST_MATCH_SCRIPT)
 
@@ -51,6 +75,8 @@ def main():
 
     print(f"[ctf_statistics] processing {len(bulk_matches)} matches...")
     for mid in bulk_matches:
+        # Print each match being processed
+        print(f"[ctf_statistics]   ▶ processing match {mid}")
         try:
             extract_match_data(mid, bulk_matches, bulk_maps, RUN_DIR)
         except Exception as e:
@@ -83,6 +109,7 @@ def main():
     run_subscript(COMBINE_SCRIPT)
 
     print("[ctf_statistics] all done.")
+
 
 if __name__ == "__main__":
     main()

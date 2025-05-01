@@ -1,0 +1,9 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+Swully,Blue,0.9,0,0,1,4,0,0,0,0,13,0,0,5,0,2,36,0.0,0.0,0.0,0,0,1,4.0,0.0,0.36,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Duckquack,Red,0.9,0,0,0,0,0,0,2,2,14,0,0,0,0,0,28,0.0,0.0,0.0,0,0,0,0.0,7.0,0.5,0,0,0,0,0,1,0,1,0.0,0.0,50.0,50.0
+Atticus,Red,0.9,0,0,1,36,0,0,0,0,0,0,0,0,0,0,28,0.0,0.0,0.0,0,0,1,36.0,0.0,0.0,1,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+JukeOfEarl,Red,0.9,0,0,0,0,0,0,1,1,12,0,0,10,0,4,28,0.0,0.0,0.0,0,0,0,0.0,12.0,0.43,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+PuyoPuyo,Red,0.3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,28,0.0,0.0,0.0,0,0,0,0.0,0.0,0.04,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+theThermals,Blue,0.3,0,0,0,0,0,0,0,0,5,0,0,0,0,0,36,0.0,0.0,0.0,0,0,0,0.0,0.0,0.14,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Zoltan Mesko,Blue,0.9,0,0,2,7,2,2,0,0,0,0,0,15,0,6,36,0.0,0.0,0.0,0,0,0,3.5,0.0,0.0,0,1,0,0,0,0,0,0,50.0,0.0,0.0,0.0
+Hooblagoo,Blue,0.9,0,0,1,17,1,1,0,0,0,0,0,10,0,4,36,0.0,0.0,0.0,0,0,0,17.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
