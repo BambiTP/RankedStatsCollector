@@ -1,4 +1,3 @@
-# File: stats.py
 #!/usr/bin/env python3
 import sys
 import pandas as pd
@@ -127,9 +126,9 @@ if __name__=='__main__':
             team_entry = per_map[m]['red_team'] if p['Team'].strip().lower()=='red' else per_map[m]['blue_team']
             update_entry(team_entry,p,p['caps_for'],p['caps_against'],res,winner)
 
+    # Prepare output directory
     base = 'Stats'
     os.makedirs(base,exist_ok=True)
-    import re
     idxs = [int(m.group(1)) for d in os.listdir(base)
             if os.path.isdir(os.path.join(base,d))
             and (m:=re.match(r'^Stats\((\d+)\)$',d))]
@@ -137,22 +136,28 @@ if __name__=='__main__':
     out = os.path.join(base, f"Stats({idx})")
     os.makedirs(out)
 
-    import pandas as pd
+    # Build and sort overall dataframe by Minutes
     overall_df = pd.DataFrame([build_record(e) for e in overall.values()])
+    overall_df.sort_values('Minutes', ascending=False, inplace=True)
+
+    # Build map results dataframe (no Minutes column)
     mr_df      = pd.DataFrame([{
         'Map':m,'Games':v['Games'],'RedWins':v['RedWins'],'BlueWins':v['BlueWins'],
         'Red Win %':v['RedWins']/v['Games'] if v['Games'] else 0,
         'Blue Win %':v['BlueWins']/v['Games'] if v['Games'] else 0
     } for m,v in map_results.items()])
 
+    # Build and sort per-map player and team sheets by Minutes
     per_csvs=[]
     for m,mp in per_map.items():
         dfm = pd.DataFrame([build_record(e) for e in mp.values()])
+        dfm.sort_values('Minutes', ascending=False, inplace=True)
         safe = m.replace(' ','_').replace('/','_')[:31]
         fn   = f"stats_{safe}.csv"
         dfm.to_csv(os.path.join(out,fn),index=False)
         per_csvs.append((fn,dfm))
 
+    # Save overall and map results CSVs
     overall_df.to_csv(os.path.join(out,'players_stats_overall.csv'),index=False)
     mr_df     .to_csv(os.path.join(out,'map_results.csv'),index=False)
 
@@ -165,22 +170,32 @@ if __name__=='__main__':
         for fn,dfm in per_csvs:
             sheet = fn[:-4][:31]
             dfm.to_excel(writer,sheet_name=sheet,index=False)
-        book = writer.book
-        percent_cols = [c for c in derived_stats if '%' in c] + ['Red Win %','Blue Win %']
-        decimal_cols = [c for c in derived_stats if '%' not in c]
-        for sheet_name,ws in writer.sheets.items():
-            if sheet_name=='OverallPlayers': df_ref=overall_df
-            elif sheet_name=='MapResults':    df_ref=mr_df
-            else:                            df_ref=dict(per_csvs).get(f"{sheet_name}.csv")
-            if df_ref is None: continue
-            for idx_col,col in enumerate(df_ref.columns,1):
-                max_len = max(df_ref[col].astype(str).map(len).max(),len(col))+2
+        # Auto-adjust columns and formats, then freeze panes
+        for sheet_name, ws in writer.sheets.items():
+            # Select appropriate DataFrame reference
+            if sheet_name == 'OverallPlayers':
+                df_ref = overall_df
+            elif sheet_name == 'MapResults':
+                df_ref = mr_df
+            else:
+                df_ref = dict(per_csvs).get(f"{sheet_name}.csv")
+            if df_ref is None:
+                continue
+            # Adjust column widths and number formats
+            percent_cols = [c for c in derived_stats if '%' in c] + ['Red Win %', 'Blue Win %']
+            decimal_cols = [c for c in derived_stats if '%' not in c]
+            for idx_col, col in enumerate(df_ref.columns, start=1):
+                max_len = max(df_ref[col].astype(str).map(len).max(), len(col)) + 2
                 ws.column_dimensions[get_column_letter(idx_col)].width = max_len
-                if col in percent_cols: fmt='0.00%'
-                elif col in decimal_cols: fmt='0.00'
-                else: fmt=None
+                fmt = None
+                if col in percent_cols:
+                    fmt = '0.00%'
+                elif col in decimal_cols:
+                    fmt = '0.00'
                 if fmt:
                     for cell in ws[get_column_letter(idx_col)]:
                         cell.number_format = fmt
+            # Freeze the first row and first column
+            ws.freeze_panes = 'B2'
 
-    print(f"Generated stats and Excel workbook in {out}")
+    print(f"Generated sorted stats and Excel workbook in {out}")

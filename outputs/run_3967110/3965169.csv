@@ -1,0 +1,9 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+HELEN KELLER,Red,0.9,0,0,1,4,0,0,0,0,18,0,0,0,3,0,16,0.0,0.0,0.0,0,0,1,4.0,0.0,1.12,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+bitter heart,Blue,0.9,0,0,0,0,0,0,1,1,18,0,0,0,0,0,15,0.0,0.0,0.0,0,0,0,0.0,18.0,1.2,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+KING KRULE,Red,0.9,0,0,1,11,1,1,0,1,0,0,0,5,0,2,16,1.0,0.0,0.0,0,1,0,11.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+EpicBlob,Red,0.9,0,0,0,0,0,1,2,2,20,0,0,0,5,1,16,2.0,0.0,0.0,1,0,0,0.0,10.0,1.25,0,0,0,0,0,1,0,1,0.0,0.0,50.0,50.0
+KonTiki,Blue,0.9,0,0,1,2,0,0,0,0,16,0,0,0,15,3,15,0.0,0.0,0.0,0,0,1,2.0,0.0,1.07,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+EvTheSmev,Red,0.3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,16,0.0,0.0,0.0,0,0,0,0.0,0.0,0.06,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Light,Blue,0.9,0,0,1,1,1,1,0,1,0,0,0,10,5,5,15,1.0,0.0,0.0,0,1,0,1.0,0.0,0.0,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0
+BallsToYou.,Blue,0.9,0,0,1,13,1,2,0,0,1,0,0,5,0,2,15,0.0,0.0,0.0,1,0,0,13.0,0.0,0.07,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0

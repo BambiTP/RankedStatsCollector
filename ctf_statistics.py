@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import os
 import sys
 import subprocess
@@ -75,12 +74,14 @@ def main():
 
     print(f"[ctf_statistics] processing {len(bulk_matches)} matches...")
     for mid in bulk_matches:
-        # Print each match being processed
-        print(f"[ctf_statistics]   ▶ processing match {mid}")
+        # Log each match being started
+        print(f"[ctf_statistics] ▶ processing match {mid}")
         try:
             extract_match_data(mid, bulk_matches, bulk_maps, RUN_DIR)
+            # Log success for each match
+            print(f"[ctf_statistics] ✓ match {mid} processed successfully")
         except Exception as e:
-            print(f"[ctf_statistics]   ✖ match {mid} failed:", e)
+            print(f"[ctf_statistics] ✖ match {mid} failed: {e}")
             if mid not in failed_match_ids:
                 failed_match_ids.append(mid)
 
@@ -90,11 +91,11 @@ def main():
 
     print("[ctf_statistics] compiling aggregated CSV…")
     compile_data(RUN_DIR, AGG_CSV)
-    print(f"[ctf_statistics]   → {AGG_CSV}")
+    print(f"[ctf_statistics] ✓ aggregated CSV compiled: {AGG_CSV}")
 
     print("[ctf_statistics] compiling combined CSV…")
     combine_stats_csv(RUN_DIR, AGG_CSV, COMB_CSV, bulk_matches, bulk_maps)
-    print(f"[ctf_statistics]   → {COMB_CSV}")
+    print(f"[ctf_statistics] ✓ combined CSV compiled: {COMB_CSV}")
 
     # 5) Write failures list if any
     if failed_match_ids:
@@ -103,7 +104,7 @@ def main():
         with open(txt, "w") as f:
             for m in failed_match_ids:
                 f.write(f"{m}\n")
-        print(f"[ctf_statistics]   → {txt}")
+        print(f"[ctf_statistics] ✓ failure list written: {txt}")
 
     # 6) Kick off combine.py
     run_subscript(COMBINE_SCRIPT)

@@ -1,0 +1,8 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+Duckquack,Red,0.2,0,0,1,6,0,0,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,1,6.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+fone,Blue,0.2,0,0,0,0,0,0,0,0,5,0,0,0,0,0,6,0.0,0.0,0.0,0,0,0,0.0,0.0,0.83,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Kokrut,Red,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+metalhead,Blue,0.2,0,0,0,0,0,0,0,1,5,0,0,0,5,1,6,0.0,0.0,0.0,0,1,0,0.0,0.0,0.83,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+hail santa,Blue,0.2,0,0,0,0,0,0,0,0,5,0,0,0,0,0,6,0.0,0.0,0.0,0,0,0,0.0,0.0,0.83,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Color Blind,Red,0.2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,1,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Ann with a E,Red,0.2,0,0,0,0,0,0,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
