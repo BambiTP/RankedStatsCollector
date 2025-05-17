@@ -28,56 +28,74 @@ failed_match_ids = []
 ############
 # NEW: Load Bulk Data
 ############
+
 def compile_data(file_directory, output_file):
     """
     Compile match CSVs in `file_directory` into one stats CSV+TXT,
     collapsing Player names case-insensitively and picking the
     most-frequent original spelling for the final 'Player' column.
+    If there are no CSVs, or if all CSVs are empty, the function
+    will print a notice and return.
     """
+    # 1) Directory check
     if not exists(file_directory):
-        raise OSError(f"Directory {file_directory!r} does not exist")
+        print(f"[compile_data] Directory {file_directory!r} does not exist—nothing to do.")
+        return
 
-    # 1) Read all your per-match CSVs
-    df_all = pd.concat(
-        (pd.read_csv(f) for f in iglob(join(file_directory, '*.csv'))),
-        ignore_index=True
-    )
+    # 2) Gather all per-match CSVs
+    csv_files = list(iglob(join(file_directory, '*.csv')))
+    if not csv_files:
+        print(f"[compile_data] No CSV files found in {file_directory!r}—skipping aggregation.")
+        return
 
-    # 2) Keep the original name, and make a casefold key
+    # 3) Read & concatenate, skipping empty CSVs
+    dfs = []
+    for f in csv_files:
+        try:
+            dfs.append(pd.read_csv(f))
+        except pd.errors.EmptyDataError:
+            logging.warning(f"[compile_data] Skipping empty CSV: {f}")
+    if not dfs:
+        print(f"[compile_data] No non-empty CSV files to aggregate in {file_directory!r}.")
+        return
+
+    df_all = pd.concat(dfs, ignore_index=True)
+
+    # 4) Preserve original names & build a casefold key
     df_all['Player_orig'] = df_all['Player']
     df_all['Player_key']  = df_all['Player_orig'].str.casefold()
 
-    # 3) Figure out which columns are numeric so we sum those
+    # 5) Identify numeric columns to sum
     numeric_cols = df_all.select_dtypes(include=[np.number]).columns.tolist()
 
-    # 4) Build an agg dict: sum all numeric stats, and for Player_orig take the mode
+    # 6) Build aggregation dict
     agg_dict = {col: 'sum' for col in numeric_cols}
     agg_dict['Player_orig'] = lambda names: names.mode()[0]
 
-    # 5) Group by the casefold key
+    # 7) Group by the casefold key and aggregate
     df = (
         df_all
         .groupby('Player_key', as_index=False)
         .agg(agg_dict)
-        # rename our representative spelling back to 'Player'
         .rename(columns={'Player_orig': 'Player'})
     )
 
-    # 6) Drop the helper key
+    # 8) Drop helper column
     df.drop(columns=['Player_key'], inplace=True)
 
-    # 7) Re-order so Player is first
+    # 9) Reorder so Player is first
     other_cols = [c for c in df.columns if c != 'Player']
     df = df[['Player'] + other_cols]
 
-    # 8) Recompute your cumulative derivatives
+    # 10) Recompute cumulative/derived stats
     df = cumulative_derivative_statistics(df)
 
-    # 9) Write out CSV + TXT
+    # 11) Write outputs
     df.to_csv(output_file, index=False)
     with open(output_file.replace('.csv', '.txt'), 'w') as f:
         f.write(df.to_string(index=False))
 
+    print(f"Wrote combined stats to {output_file} and TXT to {output_file.replace('.csv', '.txt')}")
 
 def load_bulk_matches(bulk_matches_file):
     """

@@ -1,8 +1,0 @@
-Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
-Regicide,Blue,0.2,-1,0,1,0,1,1,0,0,1,0,0,5,0,2,9,0.0,0.0,0.0,0,0,0,0.0,0.0,0.11,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0
-wallsquirrel,Blue,0.2,-1,0,1,4,1,1,0,0,0,0,0,5,0,2,9,0.0,0.0,0.0,0,0,0,4.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-metalhead,Red,0.2,1,0,0,0,0,0,2,2,4,0,0,5,0,2,4,0.0,0.0,0.0,0,0,0,0.0,2.0,1.0,0,0,0,0,0,2,1,2,0.0,0.0,100.0,100.0
-ipopu,Red,0.2,1,0,0,0,0,0,1,1,4,0,0,0,0,0,4,0.0,0.0,0.0,0,0,0,0.0,4.0,1.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-Wilma,Red,0.2,1,1,1,8,0,0,0,0,1,0,0,4,0,0,4,0.0,0.0,100.0,0,0,0,8.0,0.0,0.25,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-AVP,Blue,0.2,-1,0,2,0,1,1,0,0,0,0,0,5,0,2,9,0.0,0.0,0.0,0,0,1,0.0,0.0,0.0,0,2,1,0,0,0,0,0,100.0,0.0,0.0,0.0
-Hellball2079,Red,0.2,1,0,1,1,0,0,0,0,0,0,0,0,0,0,4,0.0,0.0,0.0,0,0,1,1.0,0.0,0.0,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0

@@ -1,9 +1,0 @@
-Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
-HammerTime,Red,0.9,0,0,1,48,0,0,0,0,0,0,0,0,0,0,44,0.0,0.0,0.0,0,0,1,48.0,0.0,0.0,1,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-Exsufflicate,Blue,0.9,0,0,1,11,1,1,0,0,3,0,0,5,0,2,48,0.0,0.0,0.0,0,0,0,11.0,0.0,0.06,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-korso,Blue,0.9,0,0,2,29,2,2,0,0,0,0,0,5,0,2,48,0.0,0.0,0.0,0,0,0,14.5,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-PuyoPuyo,Red,0.9,0,0,0,0,0,1,1,1,4,0,0,0,0,0,44,1.0,0.0,0.0,1,0,0,0.0,4.0,0.09,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-Squish,Red,0.9,0,0,0,0,0,0,0,0,0,0,0,5,0,2,44,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-ipopu,Red,0.9,0,0,0,0,0,0,1,1,4,0,0,0,0,0,44,0.0,0.0,0.0,0,0,0,0.0,4.0,0.09,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-PotatoPotato,Blue,0.3,0,0,0,0,0,0,0,0,3,0,0,5,0,2,48,0.0,0.0,0.0,0,0,0,0.0,0.0,0.06,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
-Belacqua,Blue,0.9,0,0,1,4,0,0,0,0,3,0,0,5,0,2,48,0.0,0.0,0.0,0,0,1,4.0,0.0,0.06,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0

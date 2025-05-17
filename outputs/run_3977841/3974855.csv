@@ -1,0 +1,8 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+fender,Red,0.2,0,0,1,0,1,1,0,0,0,0,0,5,0,2,7,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0
+Messi,Red,0.2,0,0,1,0,1,1,1,1,2,0,0,5,0,2,7,1.0,0.0,0.0,0,0,0,0.0,2.0,0.29,0,1,0,0,0,1,0,1,100.0,0.0,100.0,100.0
+`ArryKane,Red,0.2,0,0,0,0,0,0,0,0,2,0,0,0,0,0,7,0.0,0.0,0.0,0,0,0,0.0,0.0,0.29,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+LiddiLidd,Blue,0.2,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0.0,1.0,0.0,0,0,0,0,0,1,0,1,0.0,0.0,100.0,100.0
+snaxolotl,Blue,0.2,0,0,1,7,0,0,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,1,7.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+OuchMyBalls,Blue,0.2,0,0,1,0,1,1,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,1,1,1,0,0,0,0,100.0,100.0,0.0,0.0
+Porps,Blue,0.2,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0.0,1.0,0.0,0,0,0,0,0,1,0,1,0.0,0.0,100.0,100.0
