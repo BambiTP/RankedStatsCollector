@@ -19,4 +19,5 @@ No need to change anything just do "python3 ctf_statistics.py" in the console wh
 
 
 If you want to test the broken matches use test.py ask me for any info or help if you need it
+
 I don't reccomend trying to edit the code it's very bad
