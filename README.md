@@ -34,13 +34,16 @@ https://tagpro.eu/?science
     What it does: For one match ID, pulls out every player’s basic and advanced stats (using the tagpro-eu library), writes them to RUN_DIR/{match_id}.csv, and logs any      failures.
 
     - compile_data(RUN_DIR, AGG_CSV)
+
       -What it does: Scans all the per-match CSVs in RUN_DIR, stitches them together into a single table (normalizing player names and recomputing cumulative stats), and        writes out AggregatedStatsOutput.csv (plus a TXT copy).
 
     - combine_stats_csv(RUN_DIR, AGG_CSV, COMB_CSV, bulk_matches, bulk_maps)
+
       What it does: Reads every per-match CSV (except the aggregated file), looks up each match’s map name, merges them into one big DataFrame, and writes             
       CombinedStatsOutput.csv (plus a formatted TXT).
 
   - stats.py
+
     -reads the CombinedStatsOutput.csv and does some math and stuff to it to turn them into the stats.
 
 (missing a a lot of steps but it's the basic gist(lol) of things.)  (somewhere along the way it combines the CombinedStatsMaster.csv with the newly generated CombinedStatsOutput.csv)
