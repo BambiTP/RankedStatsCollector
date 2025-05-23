@@ -51,7 +51,7 @@ https://tagpro.eu/?science
 
    - stats.py
 
-       - reads the CombinedStatsOutput.csv and does some math and stuff to it to turn them into the stats.
+         - reads the CombinedStatsOutput.csv and does some math and stuff to it to turn them into the stats.
 
 (missing a a lot of steps but it's the basic gist(lol) of things.)  (somewhere along the way it combines the CombinedStatsMaster.csv with the newly generated CombinedStatsOutput.csv)
 
