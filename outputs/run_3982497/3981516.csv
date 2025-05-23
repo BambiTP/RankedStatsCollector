@@ -1,0 +1,9 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+Marijuana,Blue,0.9,1,0,2,19,2,2,0,0,1,0,0,10,0,4,40,0.0,0.0,0.0,0,0,0,9.5,0.0,0.02,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+MollyScully,Red,0.9,-1,0,1,13,1,1,2,3,2,0,0,5,0,2,46,3.0,0.0,0.0,0,1,0,13.0,1.0,0.04,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+PuyoPuyo,Red,0.9,-1,0,1,18,1,1,1,1,2,0,0,0,5,1,46,1.0,0.0,0.0,0,0,0,18.0,2.0,0.04,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+BertaLovejoy,Red,0.9,-1,0,2,9,2,2,1,1,0,0,0,15,5,7,46,0.5,0.0,0.0,0,0,0,4.5,0.0,0.0,0,1,0,0,0,0,0,0,50.0,0.0,0.0,0.0
+PotatoPotato,Blue,0.9,1,1,2,12,1,1,1,1,2,0,0,5,5,3,40,1.0,0.0,50.0,0,0,0,6.0,2.0,0.05,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+RageQuit,Blue,0.9,1,0,1,3,0,1,2,2,1,0,0,5,0,2,40,2.0,0.0,0.0,1,0,1,3.0,0.5,0.02,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+nightball,Blue,0.9,1,0,1,12,1,1,1,1,6,0,0,5,0,2,40,1.0,0.0,0.0,0,0,0,12.0,6.0,0.15,0,0,0,0,0,1,1,1,0.0,0.0,100.0,100.0
+first slime,Red,0.3,0,0,0,0,0,0,0,0,2,0,0,0,0,0,46,0.0,0.0,0.0,0,0,0,0.0,0.0,0.04,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0

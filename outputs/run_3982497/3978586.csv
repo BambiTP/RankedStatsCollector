@@ -1,0 +1,8 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+greenfish,Red,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+umad,Blue,0.2,0,0,1,8,1,1,0,0,0,0,0,5,0,2,10,0.0,0.0,0.0,0,0,0,8.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Sinatra,Red,0.2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,8,0.0,0.0,0.0,0,0,0,0.0,0.0,0.12,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+TERROR NUGS,Blue,0.2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+DuckDuckJuke,Red,0.2,0,0,1,10,0,0,0,0,0,0,0,4,0,0,8,0.0,0.0,0.0,0,0,1,10.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+LilB:BallGod,Red,0.2,0,0,0,0,0,0,1,1,0,0,0,0,0,0,8,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Moto Moto,Blue,0.1,0,0,0,0,0,0,0,0,0,0,0,5,0,2,10,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
