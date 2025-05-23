@@ -21,9 +21,10 @@ No need to change anything just do "python3 ctf_statistics.py" in the console wh
 https://tagpro.eu/?science
 
 - latest_match.py
- - Gets latest match from "https://tagpro.eu/sitemaps.xml"
- - Downloads Bulk Matches from latest_match.txt to the new latest_match
- - Updates latest_match.txt
+  - Gets latest match from "https://tagpro.eu/sitemaps.xml"
+  - Downloads Bulk Matches from latest_match.txt to the new latest_match
+  - Updates latest_match.txt
+- ctf_eu.py & ctf_statistics.py
   - load_bulk_matches(bulk_matches_file)
     What it does: Reads your saved JSON of raw match data (bulkmatches.json) and returns it as a Python dictionary keyed by match ID.
 
@@ -32,7 +33,7 @@ https://tagpro.eu/?science
 
    - extract_match_data(match_id, bulk_matches, bulk_maps, RUN_DIR)
     What it does: For one match ID, pulls out every player’s basic and advanced stats (using the tagpro-eu library), writes them to RUN_DIR/{match_id}.csv, and logs any      failures.
-
+  
      - compile_data(RUN_DIR, AGG_CSV)
 
        What it does: Scans all the per-match CSVs in RUN_DIR, stitches them together into a single table (normalizing player names and recomputing cumulative stats),   
