@@ -1,7 +1,5 @@
 Collects All Ranked Stats From tagpro.eu (Collects Public Games that are 8 mins from tagpro.eu)
 
-gh repo clone BambiTP/RankedStatsCollector
-
 cd RankedStatsCollector
 
 pip install requests pandas openpyxl tagpro-eu
