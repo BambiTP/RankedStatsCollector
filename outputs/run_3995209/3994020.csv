@@ -1,0 +1,8 @@
+Player,Team,Minutes,CD,Captures,Grabs,Hold,Drops,Pops,Returns,Tags,Prevent,Pups,Pups Available,Block,Button,Support,Hold Against,K/D,Pup %,Score %,NDPops,NRTags,KF,Hold/Grab,Prevent/Return,Prevent/Hold Against,Long Holds,Flaccids,Handoffs,Good Handoffs,Captures off Handoffs,Quick Returns,Key Returns,Returns in Base,Flaccid %,Chain %,QR %,RIB %
+D Rek,Red,0.2,0,0,1,2,1,1,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,0,2.0,0.0,0.0,0,0,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+Diencash,Red,0.2,0,0,0,0,0,0,1,1,5,0,0,0,0,0,0,0.0,0.0,0.0,0,0,0,0.0,5.0,0.0,0,0,0,0,0,1,0,1,0.0,0.0,100.0,100.0
+MarcusYallow,Blue,0.2,0,0,0,0,0,0,2,2,3,0,0,0,0,0,3,0.0,0.0,0.0,0,0,0,0.0,1.5,1.0,0,0,0,0,0,1,0,1,0.0,0.0,50.0,50.0
+Green,Blue,0.2,0,0,0,0,0,0,1,1,6,0,0,0,0,0,3,0.0,0.0,0.0,0,0,0,0.0,6.0,2.0,0,0,0,0,0,1,0,1,0.0,0.0,100.0,100.0
+babyTron,Red,0.2,0,0,1,0,1,1,0,0,0,0,0,5,0,2,0,0.0,0.0,0.0,0,0,0,0.0,0.0,0.0,0,1,1,0,0,0,0,0,100.0,0.0,0.0,0.0
+oldAlt,Blue,0.2,0,0,1,0,1,1,0,0,1,0,0,5,0,2,3,0.0,0.0,0.0,0,0,0,0.0,0.0,0.33,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0
+om,Red,0.2,0,0,1,1,1,1,0,0,0,0,0,3,0,0,0,0.0,0.0,0.0,0,0,0,1.0,0.0,0.0,0,1,0,0,0,0,0,0,100.0,0.0,0.0,0.0
