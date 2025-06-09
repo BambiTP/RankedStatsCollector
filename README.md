@@ -113,8 +113,6 @@ Contributions are welcome! To contribute:
    - Add support for new statistics or output formats.
 
 ## Known Issues
-
-- **tagpro_eu Dependency**: The `tagpro_eu` library may not be publicly available. Contact the TagPro community or check for alternative parsing methods.
 - **Event Dimension Mismatch**: Some matches fail due to mismatched event data. Failed matches are logged but not retried.
 - **Performance**: Processing large numbers of matches can be slow. Consider parallelization for better performance.
 
