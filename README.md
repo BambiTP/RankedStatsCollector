@@ -1,61 +1,309 @@
-Collects All Ranked Stats From tagpro.eu (Collects Public Games that are 8 mins from tagpro.eu)
+TagPro CTF Statistics Pipeline
 
-gh repo clone BambiTP/RankedStatsCollector
+This repository contains a Python-based pipeline for fetching, processing, and analyzing Capture the Flag match data from TagPro. It generates detailed player and map statistics, producing CSV, TXT, and Excel outputs for performance analysis.
 
-cd RankedStatsCollector
+Features
 
-pip install requests pandas openpyxl tagpro-eu
+
+
+
+
+Fetch New Matches: Downloads recent match data from tagpro.eu using sitemaps.
+
+
+
+Process Match Data: Extracts raw and advanced statistics (e.g., captures, grabs, returns, handoffs) using the tagpro_eu library.
+
+
+
+Aggregate Statistics: Compiles per-match data into overall and per-map statistics.
+
+
+
+Derived Metrics: Computes advanced metrics like captures per minute, win percentage, and returns in base.
+
+
+
+Formatted Outputs: Generates CSVs, TXT files, and a formatted Excel workbook with player and map statistics.
+
+
+
+Error Handling: Logs failed matches and skips invalid data to ensure robustness.
+
+
+
+Incremental Processing: Tracks processed matches to avoid redundant work.
+
+Prerequisites
+
+
+
+
+
+Python: Version 3.8 or higher.
+
+
+
+Dependencies:
+
+
+
+
+
+requests
+
+
+
+pandas
+
+
+
+openpyxl
+
+
+
+tagpro-eu
+
+
+
+Operating System: Tested on Linux; should work on Windows with minor path adjustments.
+
+
+
+Internet Access: Required to fetch match data from tagpro.eu.
+
+Installation
+
+
+
+
+
+Clone the Repository:
+
+git clone https://github.com/BambiTP/RankedStatsCollector.git
+cd tagpro-ctf-stats
+
+
+
+Set Up a Virtual Environment (recommended):
+
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
+
+Install Dependencies:
+
+pip install requests pandas openpyxl
+
+
+
+Verify Setup: Ensure all scripts (ctf_statistics.py, latest_match.py, eu_ctf.py, stats.py, combine.py) are in the root directory, along with bulkmatches.json, bulkmaps.json, and latest_match.txt.
+
+Usage
+
+
+
+
+
+Run the Pipeline: Execute the main script to fetch, process, and analyze match data:
 
 python3 ctf_statistics.py
 
-"Stats/Stats(x)/combined_stats.xlsx" has all the stats
-
-"outputs/run_xxxx/combinedStatsMaster.csv" has the individual match stats csv
-
-the "xxxx" in run_xxxx = the final match id in your run. You can check which one it is in latest_match.txt after the run is complete.
-
-
-No need to change anything just do "python3 ctf_statistics.py" in the console while in the RankedStatsCollector directory and it will make a new folder with all the stats
-
-
-https://tagpro.eu/?science
-
-- latest_match.py
-  - Gets latest match from "https://tagpro.eu/sitemaps.xml"
-  - Downloads Bulk Matches from latest_match.txt to the new latest_match
-  - Updates latest_match.txt
-- ctf_eu.py & ctf_statistics.py
-  - load_bulk_matches(bulk_matches_file)
-
-       - What it does: Reads your saved JSON of raw match data (bulkmatches.json) and returns it as a Python dictionary keyed by match ID.
-
-   - load_bulk_maps(bulk_maps_file)
-
-       - What it does: Reads your saved JSON of map data (bulkmaps.json) and returns it as a Python dictionary keyed by map ID.
-
-   - extract_match_data(match_id, bulk_matches, bulk_maps, RUN_DIR)
-
-       - What it does: For one match ID, pulls out every player’s basic and advanced stats (using the tagpro-eu library), writes them to RUN_DIR/{match_id}.csv, and logs 
-         anyfailures.
-  
-    - compile_data(RUN_DIR, AGG_CSV)         
-       -(replaced with stats.py)
-
-         - What it does: Scans all the per-match CSVs in RUN_DIR, stitches them together into a single table (normalizing player names and recomputing cumulative stats),
-           and writes out AggregatedStatsOutput.csv (plus a TXT copy).
-
-    - combine_stats_csv(RUN_DIR, AGG_CSV, COMB_CSV, bulk_matches, bulk_maps)
-
-          - What it does: Reads every per-match CSV (except the aggregated file), looks up each match’s map name, merges them into one big DataFrame, and writes 
-           CombinedStatsOutput.csv (plus a formatted TXT).
-
-   - stats.py
-
-         - reads the CombinedStatsOutput.csv and does some math and stuff to it to turn them into the stats.
-
-(missing a a lot of steps but it's the basic gist(lol) of things.)  (somewhere along the way it combines the CombinedStatsMaster.csv with the newly generated CombinedStatsOutput.csv)
-
-https://chatgpt.com/share/683040a2-dd68-800a-bb8f-7e3a8f6ea3a8
+This will:
 
 
 
+
+
+Check dependencies.
+
+
+
+Fetch new matches (starting from the ID in latest_match.txt).
+
+
+
+Process matches and generate per-match CSVs in a new outputs/run_<match_id> folder.
+
+
+
+Compile aggregated and combined statistics.
+
+
+
+Append results to combinedStatsMaster.csv.
+
+
+
+Generate final statistics in a Stats(n) folder.
+
+
+
+Outputs:
+
+
+
+
+
+Per-Run Outputs (outputs/run_<match_id>):
+
+
+
+
+
+<match_id>.csv: Per-match player statistics.
+
+
+
+AggregatedStatsOutput.csv: Aggregated player stats.
+
+
+
+CombinedStatsOutput.csv: Per game stats.
+
+
+
+failed_matches.txt: List of failed match IDs (if any).
+
+
+
+Final Statistics (Stats(n)):
+
+
+
+
+
+players_stats_overall.csv: Overall player statistics.
+
+
+
+map_results.csv: Win rates per map.
+
+
+
+stats_<map_name>.csv: Per-map player statistics.
+
+
+
+combined_stats.xlsx: Formatted Excel workbook with all stats.
+
+
+
+Customization:
+
+
+
+
+
+Modify stats.py to add new derived statistics.
+
+
+
+Adjust filters in eu_ctf.py (e.g., timeLimit == 8) for different match criteria.
+
+
+
+Update latest_match.txt to reprocess matches from a specific ID.
+
+Contributing
+
+Contributions are welcome! To contribute:
+
+
+
+
+
+Fork the Repository and create a new branch:
+
+git checkout -b feature/your-feature
+
+
+
+Make Changes and test thoroughly:
+
+
+
+
+
+Ensure compatibility with Python 3.8+.
+
+
+
+Test with sample match data if possible.
+
+
+
+Update documentation for new features.
+
+
+
+Submit a Pull Request:
+
+
+
+
+
+Describe your changes clearly.
+
+
+
+Include any new dependencies or setup steps.
+
+
+
+Ideas for Contributions:
+
+
+
+
+
+Add parallel processing for match extraction.
+
+
+
+Implement a configuration file for filters and stats.
+
+
+
+Create unit tests for key functions.
+
+
+
+Improve logging with a consistent framework.
+
+
+
+Add support for new statistics or output formats.
+
+Known Issues
+
+
+
+
+
+tagpro_eu Dependency: The tagpro_eu library may not be publicly available. Contact the TagPro community or check for alternative parsing methods.
+
+
+
+Event Dimension Mismatch: Some matches fail due to mismatched event data. Failed matches are logged but not retried.
+
+
+
+Performance: Processing large numbers of matches can be slow. Consider parallelization for better performance.
+
+Acknowledgments
+
+
+
+
+
+TagPro Community: For providing match data and the tagpro_eu library.
+
+
+
+Contributors: Thanks to all who improve this pipeline.
+
+Contact
+
+For questions or support, open an issue on GitHub or contact metjr_ on discord
