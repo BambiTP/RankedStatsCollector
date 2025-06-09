@@ -36,16 +36,14 @@ This repository contains a Python-based pipeline for fetching, processing, and a
 
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate
    ```
 
 3. **Install Dependencies**:
 
    ```bash
-   pip install requests pandas openpyxl
+   pip install requests pandas openpyxl tagpro-eu
    ```
-
-4. **Verify Setup**: Ensure all scripts (`ctf_statistics.py`, `latest_match.py`, `eu_ctf.py`, `stats.py`, `combine.py`) are in the root directory, along with `bulkmatches.json`, `bulkmaps.json`, and `latest_match.txt`.
 
 ## Usage
 
