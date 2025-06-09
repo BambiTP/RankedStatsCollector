@@ -122,3 +122,6 @@ Contributions are welcome! To contribute:
 ## Contact
 
 For questions or support, open an issue on GitHub or contact metjr\_ on discord
+
+
+![out](https://github.com/user-attachments/assets/8e4c30b5-2166-421a-bf08-d412878959aa)
